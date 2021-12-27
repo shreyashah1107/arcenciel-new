@@ -1,0 +1,51 @@
+.hero {
+	&--img {
+		position: relative;
+
+		img {
+			width: auto;
+			height: 500px;
+			max-width: 100%;
+		}
+
+		&:before {
+			content: 'Arcenciel';
+			position: absolute;
+		    left: 0;
+		    right: 0;
+			font-family: $font-family-secondary;
+			font-size: 272px;
+			line-height: 316px;
+			mix-blend-mode: overlay;
+			opacity: 0.5;
+		    z-index: -1;
+		}
+	}
+
+	.logo-text {
+		position: absolute;
+		left: 0;
+    	right: 0;
+    	top: 50%;
+    	transform: translateY(-50%);
+
+		h1 {
+			font-family: 'Panchang-Bold';
+			font-size: 62.5px;
+			line-height: 82px;
+			margin: 0;
+		}
+	}
+
+	&--content {
+		position: absolute;
+	}
+}
+
+@include media-breakpoint-down(xl) {
+
+}
+
+@include media-breakpoint-down(lg) {
+	
+}

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Panchang-Regular';
+    src: url('../fonts/Panchang-Regular.woff2') format('woff2'),
+         url('../fonts/Panchang-Regular.woff') format('woff'),
+         url('../fonts/Panchang-Regular.ttf') format('truetype'),
+         url('../fonts/Panchang-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Panchang-Medium';
+    src: url('../fonts/Panchang-Medium.woff2') format('woff2'),
+         url('../fonts/Panchang-Medium.woff') format('woff'),
+         url('../fonts/Panchang-Medium.ttf') format('truetype'),
+         url('../fonts/Panchang-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Panchang-Semibold';
+    src: url('../fonts/Panchang-Semibold.woff2') format('woff2'),
+         url('../fonts/Panchang-Semibold.woff') format('woff'),
+         url('../fonts/Panchang-Semibold.ttf') format('truetype'),
+         url('../fonts/Panchang-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Panchang-Bold';
+    src: url('../fonts/Panchang-Bold.woff2') format('woff2'),
+         url('../fonts/Panchang-Bold.woff') format('woff'),
+         url('../fonts/Panchang-Bold.ttf') format('truetype'),
+         url('../fonts/Panchang-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
