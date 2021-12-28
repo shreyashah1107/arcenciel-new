@@ -6,11 +6,11 @@
         <title>Arcenciel</title>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="60x60" href="public/img/favicon/apple-touch-icon.png">
+        <!-- <link rel="apple-touch-icon" sizes="60x60" href="public/img/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon/favicon-16x16.png">
         <link rel="manifest" href="public/img/favicon/site.webmanifest">
-        <link rel="mask-icon" href="public/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="mask-icon" href="public/img/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,11 +26,41 @@
         <!-- Custom + Bootstrap v5.1.1 CSS -->
         <link rel="stylesheet" href="public/css/style.css">
     </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target="#topMenu">
 
-        <main>
+        <!-- Section Header Started -->
+            <header>
+                <nav id="topMenu" class="navbar navbar-dark navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuLinks" aria-controls="menuLinks" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <!-- Menu Bar Icon for mobile -->
+                            <!-- <div class="mobile-nav-toggle"> -->
+                                <!-- <span class="nav-toggle-line"></span>
+                                <span class="nav-toggle-line"></span>
+                                <span class="nav-toggle-line"></span> -->
+                            <!-- </div> -->
+                        </button>
+                        <div class="collapse navbar-collapse" id="menuLinks">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="#houseTour">House Tour</a>
+                                <a class="nav-link" href="#locationBenefit">Location Benefit</a>
+                                <a class="nav-link" href="#amenities">Amenities</a>
+                                <a class="nav-link" href="#configuration">Configuration</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="call-back-modal-btn">
+                    <a class="btn btn-callback" data-bs-toggle="modal" data-bs-target="#exampleModal">Get a call back</a>
+                </div>
+            </header>
+        <!-- Section Header Ended -->
+
+        <main data-bs-spy="scroll" data-bs-target="#topMenu" data-bs-offset="0" class="scrollspy-example" tabindex="0">
             <!-- Section Hero Started -->
-                <section class="hero">
+                <section class="hero pb-5">
                     <div class="container">
                         <div class="text-center">
                             <div class="hero--img">
@@ -41,6 +71,7 @@
                                 </div>
 
                                 <div class="hero--content">
+                                    <div class="map-marker"><img src="public/img/icons/map-marker.svg" alt="Map Pin"></div>
                                     <div class="location">Mulund WEST</div>
                                     <div class="address">Jain Temple, CTS No. 698A/1, Raghavendra Swami Road, off. Goregaon, Mulund</div>
                                 </div>
@@ -51,23 +82,116 @@
             <!-- Section Hero Ended -->
 
             <!-- Section House Tour Started -->
+                <section id="houseTour" class="house-tour section-padding">
+                    <div class="container-fluid">
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <div class="section-title">
+                                    House Tour
+                                    <div class="section-title--before-content is-small">House Tour</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-5">
+                            <div class="col-lg-6">
+                                <div class="tour-img">
+                                    <img src="public/img/tour/bedroom-1.png" alt="Bedroom">
+                                    <a href="javascript:void(0);" class="expand-house-img" data-bs-toggle="modal" data-bs-target="#expandImgModal">
+                                        <img src="public/img/icons/maximize.svg" alt="Expand">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="tour-img">
+                                    <img src="public/img/tour/bedroom-1.png" alt="Bedroom">
+                                    <a href="javascript:void(0);" class="expand-house-img" data-bs-toggle="modal" data-bs-target="#expandImgModal">
+                                        <img src="public/img/icons/maximize.svg" alt="Expand">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <!-- Section House Tour Ended -->
 
             <!-- Section Location Benefit Started -->
+                <section id="locationBenefit" class="section-padding">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title">
+                                    Location Benefit
+                                    <div class="section-title--before-content">Benefits</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <!-- Section Location Benefit Ended -->
 
             <!-- Section Amenities Started -->
+                <section id="amenities" class="section-padding">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title">
+                                    Amenities
+                                    <div class="section-title--before-content">Amenities</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <!-- Section Amenities Ended -->
 
             <!-- Section Configuration Started -->
+                <section id="configuration" class="section-padding">
+                    
+                </section>
             <!-- Section Configuration Ended -->
 
             <!-- Section Partners Started -->
-            <!-- Section Partners Sponsors Ended -->
+            <!-- Section Partners Ended -->
         </main>
 
         <!-- Section Footer Started -->
         <!-- Section Footer Ended -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ..
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade expand-img-modal" id="expandImgModal" tabindex="-1" aria-labelledby="expandImgModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="public/img/tour/bedroom-1.png" class="img-fluid" alt="Bedroom">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- JS -->
         <script src="public/js/jquery-3.6.0.min.js"></script>

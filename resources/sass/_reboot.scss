@@ -1,5 +1,7 @@
 body {
+	position: relative;
 	word-break: break-word;
+	
 }
 
 a {
@@ -13,7 +15,7 @@ a {
 }
 
 .section-padding {
-	padding: 100px 0;
+	padding: 150px 0;
 }
 
 .section-top-padding {
@@ -25,29 +27,38 @@ a {
 }
 
 .section-title {
-	font-size: 72px;
-	font-family: $font-family-base;
+	position: relative;
+	font-family: 'Panchang-Medium';
+	font-size: 30px;
+	line-height: 40px;
+	letter-spacing: 0.05em;
+	margin-bottom: 40px;
+
+	&--before-content {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-75%);
+	    left: -15px;
+	    right: 0;
+		font-family: $font-family-secondary;
+		font-size: 200px;
+		line-height: 232px;
+		mix-blend-mode: overlay;
+		opacity: 0.5;
+
+		&.is-small {
+			left: 0;
+			font-size: 130px;
+			line-height: 152px;
+			transform: translateY(-65%);
+		}
+	}
 }
 
 .section-content {
 	font-size: 27px;
 	line-height: 35px;
-}
-
-main {
-	margin-top: 114px;
-
-	@include media-breakpoint-down(xl) {
-		margin-top: 91px;
-	}
-
-	@include media-breakpoint-down(lg) {
-		margin-top: 84px;
-	}
-
-	@include media-breakpoint-down(sm) {
-		margin-top: 74px;
-	}
 }
 
 @include media-breakpoint-down(lg) {
