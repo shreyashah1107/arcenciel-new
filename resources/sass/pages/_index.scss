@@ -98,6 +98,45 @@
 	}
 }
 
+.partners {
+	padding: 100px 0;
+
+	.card-partner {
+		padding: 40px 20px;
+		border: 1px solid rgba($white,.3);
+		width: 320px;
+
+		&--title {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: 0.5em;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		&--img {
+			height: 45px;
+
+			img {
+				height: 100%;
+				width: auto;
+				max-width: 100%;
+				object-fit: contain;	
+			}
+
+			&:not(:last-of-type) {
+				margin-right: 50px;
+			}
+		}
+
+		&:not(:last-of-type) {
+			margin-right: 40px;
+		}
+	}
+}
+
 // < 1199px
 @include media-breakpoint-down(xl) {
 	.house-tour {
@@ -189,6 +228,18 @@
 
 		.view-all-btn {
 			margin-top: 0;
+		}
+	}
+	.partners {
+		padding: 50px 0;
+	
+		.card-partner {
+			width: 100%;
+
+			&:not(:last-of-type) {
+				margin-bottom: 30px;
+				margin-right: 0;
+			}
 		}
 	}
 }

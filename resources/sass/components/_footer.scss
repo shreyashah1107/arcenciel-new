@@ -206,3 +206,14 @@ footer {
 		}
 	}
 }
+
+
+@include media-breakpoint-down(md) {
+	footer {
+		border-top: 0;
+
+		.contact-form-wrapper {
+			padding: 50px 0;
+		}
+	}
+}

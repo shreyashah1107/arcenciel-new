@@ -23,13 +23,34 @@
         <!-- Custom + Bootstrap v5.1.1 CSS -->
         <link rel="stylesheet" href="public/css/style.css">
     </head>
-    <body data-bs-spy="scroll" data-bs-target="#topMenu">
+    <body>
 
         <!-- Section Header Started -->
-            <div id="header"></div>
+            <header class="d-flex align-items-center">
+                <div class="container-fluid d-flex align-items-center justify-content-lg-center">
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a class="nav-link" href="#houseTour">House Tour</a></li>
+                            <li><a class="nav-link" href="#locationBenefit">Location Benefit</a></li>
+                            <li><a class="nav-link" href="#amenities">Amenities</a></li>
+                            <li><a class="nav-link" href="#configuration">Configuration</a></li>
+                        </ul>
+                        <!-- Menu Bar Icon for mobile -->
+                        <div class="mobile-nav-toggle">
+                            <span class="nav-toggle-line"></span>
+                            <span class="nav-toggle-line"></span>
+                            <span class="nav-toggle-line"></span>
+                        </div>
+                    </nav>
+
+                    <div class="call-back-modal-btn">
+                        <a class="btn btn-callback" data-bs-toggle="modal" data-bs-target="#exampleModal">Get a call back</a>
+                    </div>
+                </div>
+            </header>
         <!-- Section Header Ended -->
 
-        <main data-bs-spy="scroll" data-bs-target="#topMenu" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <main>
             <!-- Section Hero Started -->
                 <section class="hero pb-5">
                     <div class="container">
@@ -491,6 +512,35 @@
             <!-- Section Configuration Ended -->
 
             <!-- Section Partners Started -->
+                <section class="partners">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="d-md-flex justify-content-center">
+                                    <div class="card-partner">
+                                        <div class="card-partner--title">FINANCIAL PARTNER</div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="card-partner--img">
+                                                <img src="public/img/logo/partner-1.svg" alt="Bajaj">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-partner">
+                                        <div class="card-partner--title">Strategic partner</div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="card-partner--img">
+                                                <img src="public/img/logo/partner-2.svg" alt="Bajaj">
+                                            </div>
+                                            <div class="card-partner--img">
+                                                <img src="public/img/logo/partner-3.svg" alt="Bajaj">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <!-- Section Partners Ended -->
         </main>
 
