@@ -46,6 +46,10 @@
 	.view-all-btn {
 		margin-top: 100px;
 	}
+
+	.view-all-img-wrapper {
+		display: none;
+	}
 }
 
 .location-benefit {
@@ -136,6 +140,46 @@
 	}
 }
 
+.feature {
+	padding: 50px 0 100px;
+
+	.feature-slider {
+		&--item {
+			display: flex;
+			align-items: center;
+
+			svg {
+				width: 30px;
+				height: auto;
+				margin: 0 32px;
+			}
+
+			h5 {
+				margin: 0;
+				font-weight: 500;
+				font-size: 30px;
+				line-height: 37px;
+			}
+		}
+	}
+}
+
+.map-link {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: capitalize;
+
+	a {
+		display: inline-flex;
+		align-items: center;
+
+		img {
+			margin-right: 10px;
+		}
+	}
+}
+
 // < 1199px
 @include media-breakpoint-down(xl) {
 	.house-tour {
@@ -210,7 +254,7 @@
 	}
 
 	.configuration {
-		padding: 70px 0;
+		padding: 70px 0 0;
 	}
 }
 
@@ -238,6 +282,29 @@
 			margin-top: 0;
 		}
 	}
+	.feature {
+	    padding: 20px 0 60px;
+
+		.feature-slider {
+			&--item {
+				svg {
+					width: 10px;
+					margin: 0 10px;
+				}
+
+				h5 {
+					font-size: 12px;
+					line-height: 17px;
+				}
+			}
+		}
+	}
+
+	.map-link {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
 	.partners {
 		padding: 50px 0;
 	

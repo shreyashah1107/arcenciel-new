@@ -11,6 +11,16 @@ $(document).ready(function() {
         }
     });
 
+    $(".view-all-btn").on('click', function() {
+        $(".show-all-img-wrapper").hide();
+        $(".view-all-img-wrapper").show();
+    });
+
+    $(".hide-all-btn").on('click', function() {
+        $(".view-all-img-wrapper").hide();
+        $(".show-all-img-wrapper").show();
+    });
+
     // Amenities Swiper
     var swiper = new Swiper('.amenities-slider--suggestions', {
         slidesPerView: 4,
@@ -78,6 +88,27 @@ $(document).ready(function() {
             1200: {
                 slidesPerView: 4,
             },
+        },
+    });
+
+    // Feature Swiper
+    var swiper = new Swiper('.feature-slider', {
+        slidesPerView: 1.7,
+        spaceBetween: 20,
+        autoplay: true,
+        speed: 1000,
+        delay: 5000,
+
+        breakpoints: {
+            500: {
+                slidesPerView: 3,
+            },        
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 2.3,
+            }
         },
     });
 
