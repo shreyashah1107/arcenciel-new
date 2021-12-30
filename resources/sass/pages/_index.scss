@@ -1,6 +1,5 @@
 .house-tour {
-	padding-top: 100px;
-    padding-bottom: 50px;
+	padding: 100px 0 300px;
 
 	.tour-img {
 		position: relative;
@@ -51,12 +50,12 @@
 
 .location-benefit {
 	position: relative;
-	padding: 300px 0 100px;
+	padding: 100px 0 300px;
 
 	.location-banner {
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: -220px;
 
 		img {
 			width: 600px;
@@ -66,12 +65,12 @@
 
 .amenities {
 	position: relative;
-	padding: 350px 0 200px;
+	padding: 100px 0;
 
 	.amenities-banner {
 		position: absolute;
 		right: 0;
-		top: -100px;
+		top: -300px;
 
 		img {
 			width: 900px;
@@ -80,7 +79,7 @@
 }
 
 .configuration {
-	padding-top: 170px;
+	padding-top: 100px;
 
 	.configuration-card-wrapper {
 		position: relative;
@@ -180,8 +179,15 @@
 
 // < 992px
 @include media-breakpoint-down(lg) {
+	.house-tour {
+	    padding: 100px 0 60px;
+	}
+
 	.location-benefit {
+		padding: 250px 0 20px;
+
 		.location-banner {
+			top: 0;
 			right: -115px;
 
 			img {

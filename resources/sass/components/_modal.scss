@@ -1,3 +1,94 @@
+.call-back-modal {
+	.modal-content {
+		background-color: #282B31;
+		border-radius: 20px;
+
+		.modal-header {
+			justify-content: center;
+			padding: 30px;
+			text-align: center;
+			border-bottom-color: rgba($white, 0.15);
+
+			.btn-close {
+				position: absolute;
+				right: 30px;
+    			top: 30px;
+    			background-image: url('../img/icons/close.png');
+			}
+
+			h5 {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				margin-bottom: 12px;
+			}
+
+			p {
+				color: rgba($white, 0.75);
+				font-size: 14px;
+				line-height: 17px;
+				margin: 0;
+			}
+		}
+
+		.modal-body {
+			padding: 30px;
+
+			.form-group {
+				margin-bottom: 15px;
+
+				.form-control,
+				.form-select,
+				.input-group-text {
+					background-color: #282B31;
+				}
+			}
+
+			input[type="submit"],
+			.wpcf7-form .wpcf7-submit {
+				font-size: 14px;
+		        color: $white;
+		        width: 100%;
+		        padding: 15px;
+		        border-radius: 8px;
+		        font-weight: 500;
+		        border: 1px solid #2C2F35;
+				background-color: rgba($white, 0.1);
+		        transition: all 0.3s ease-in;				
+
+				&.disabled,
+				&:disabled {
+					pointer-events: none;
+					color: rgba($white, 0.5);
+				}
+
+				&:hover {
+					background-color: #585f6e;
+				}
+			}
+
+			select,
+			.wpcf7-select {
+		        option {
+		            background-color: #282B31;
+		            color: $input-color;
+		        }
+		    }
+
+		    .wpcf7-form {
+		    	p {
+					margin-bottom: 15px;
+				}
+				.wpcf7-form-control-wrap {
+			        .wpcf7-form-control {
+			            background-color: #282B31;
+			        }
+			    }
+		    }
+		}
+	}
+}
+
 .expand-img-modal {
 	.modal {
 		&-content {
@@ -43,5 +134,20 @@
 .modal-backdrop {
 	&.show {
 		opacity: 0.8;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.call-back-modal {
+		.modal-content {
+			.modal-body,
+			.modal-header {
+				padding: 30px 20px;
+
+				.btn-close {
+					right: 20px;
+				}
+			}
+		}
 	}
 }

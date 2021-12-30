@@ -44,7 +44,7 @@
                     </nav>
 
                     <div class="call-back-modal-btn">
-                        <a class="btn btn-callback" data-bs-toggle="modal" data-bs-target="#exampleModal">Get a call back</a>
+                        <a class="btn btn-callback" data-bs-toggle="modal" data-bs-target="#callBackModal">Get a call back</a>
                     </div>
                 </div>
             </header>
@@ -545,23 +545,113 @@
         </main>
 
         <!-- Section Footer Started -->
-            <div id="footer"></div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row gx-lg-0">
+                        <div class="col-lg-6">
+                            <div class="contact-form-wrapper">
+                                <h2>Got Questions?</h2>
+                                <p>Give us a call at 022 25640 611 or get a callback from us.</p>
+
+                                <form>
+                                    <div class="form-group">
+                                        <label for="call-time">When Do You Expect a call?</label>
+                                        <select id="call-time" class="form-select">
+                                            <option selected>After 8 PM</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Your Phone Number</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">+91</span>
+                                            <input type="text" id="phone" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" id="callBack" name="callBack" value="Get a Callback" disabled>
+                                    </div>
+
+                                    <div class="text-or">Or</div>
+
+                                    <div class="form-group">
+                                        <input type="submit" id="brouchureDownload" name="brouchureDownload" value="Download Brouchure">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-flex flex-column justify-content-between">
+                            <div class="contact-info">
+                                <ul class="logos list-inline">
+                                    <li class="list-inline-item"><img src="public/img/logo/logo-1.svg" alt="Logo"></li>
+                                    <li class="list-inline-item"><img src="public/img/logo/logo-2.svg" alt="Logo"></li>
+                                    <li class="list-inline-item"><img src="public/img/logo/logo-3.svg" alt="Logo"></li>
+                                </ul>
+                                <p>
+                                    <a href="tel: 022 25640 611">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.6667 10.7802V12.7802C14.6675 12.9659 14.6294 13.1497 14.555 13.3198C14.4807 13.4899 14.3716 13.6426 14.2348 13.7681C14.0979 13.8937 13.9364 13.9892 13.7605 14.0487C13.5847 14.1082 13.3983 14.1303 13.2134 14.1136C11.1619 13.8907 9.19137 13.1897 7.46004 12.0669C5.84926 11.0433 4.48359 9.67767 3.46004 8.06689C2.33336 6.3277 1.6322 4.34756 1.41337 2.28689C1.39671 2.10254 1.41862 1.91673 1.4777 1.74131C1.53679 1.56589 1.63175 1.40469 1.75655 1.26797C1.88134 1.13126 2.03324 1.02203 2.20256 0.947242C2.37189 0.87245 2.55493 0.833735 2.74004 0.833561H4.74004C5.06357 0.830376 5.37723 0.944946 5.62254 1.15592C5.86786 1.36689 6.02809 1.65986 6.07337 1.98023C6.15779 2.62027 6.31434 3.24871 6.54004 3.85356C6.62973 4.09218 6.64915 4.3515 6.59597 4.60081C6.5428 4.85012 6.41928 5.07897 6.24004 5.26023L5.39337 6.10689C6.34241 7.77592 7.72434 9.15786 9.39337 10.1069L10.24 9.26023C10.4213 9.08098 10.6501 8.95746 10.8994 8.90429C11.1488 8.85112 11.4081 8.87053 11.6467 8.96023C12.2516 9.18593 12.88 9.34248 13.52 9.42689C13.8439 9.47258 14.1396 9.6357 14.3511 9.88522C14.5625 10.1347 14.6748 10.4533 14.6667 10.7802Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        022 25640 611
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="mailto: contact@sumitwoods.com">
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.66671 3.1665H13.3334C14.0667 3.1665 14.6667 3.7665 14.6667 4.49984V12.4998C14.6667 13.2332 14.0667 13.8332 13.3334 13.8332H2.66671C1.93337 13.8332 1.33337 13.2332 1.33337 12.4998V4.49984C1.33337 3.7665 1.93337 3.1665 2.66671 3.1665Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M14.6667 4.5L8.00004 9.16667L1.33337 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        contact@sumitwoods.com
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-info--img">
+                                    <img src="public/img/logo/maharera.png" alt="Maharera">
+                                </div>
+                                <div>
+                                    <p>The Project has been registered via MAHARERA Registration Number P51800021946 and is available on the website <a href="http://maharera.mahaonline.gov.in">http://maharera.mahaonline.gov.in</a> under registered projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         <!-- Section Footer Ended -->
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal fade call-back-modal" id="callBackModal" tabindex="-1" aria-labelledby="callBackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <div>
+                            <h5 class="modal-title" id="callBackModalLabel">Get A Call Back</h5>
+                            <p>Our Offer Starts from 1.2 Crore</p>
+                        </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ..
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <div class="form-group">
+                            <label for="call-time">When Do You Expect a call?</label>
+                            <select id="call-time" class="form-select">
+                                <option selected>After 8 PM</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Your Phone Number</label>
+                            <input type="text" id="phone" class="form-control">
+                        </div>
+
+                        <input type="submit" id="callBack" name="callBack" value="Get a Callback" disabled>
                     </div>
                 </div>
             </div>

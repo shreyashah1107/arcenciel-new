@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // $("#header").load('header.html');    
-    $("#footer").load('footer.html');
+    // $("#footer").load('footer.html');
 
     $(window).on('scroll',function(event) {
         var scroll = $(window).scrollTop();
