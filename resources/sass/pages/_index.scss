@@ -163,15 +163,17 @@
 			}
 		}
 	}
-	.configuration-card-wrapper {
-		&:before {
-			left: auto;
-			right: -30px;
-    		top: -110px;
-			bottom: auto;
-			width: 80px;
-			height: 80px;
-			background-size: 80px;
+	.configuration {
+		.configuration-card-wrapper {
+			&:before {
+				left: auto;
+				right: -30px;
+	    		top: -110px;
+				bottom: auto;
+				width: 80px;
+				height: 80px;
+				background-size: 80px;
+			}
 		}
 	}
 }

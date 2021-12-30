@@ -5,37 +5,6 @@ header {
     z-index: 997;
     transition: all 0.5s;
 
-    // .navbar {
-    //     padding: 0;
-
-    //     &-collapse {
-    //         justify-content: center;
-    //     }
-
-    //     &-nav {
-    //         .nav-link {
-    //             display: inline;
-    //             padding: 0;
-    //             font-size: 14px;
-    //             font-weight: 600;
-    //             line-height: 17px;
-    //             color: $white !important;
-    //             opacity: 0.6;
-    //             transition: opacity .3s;
-
-    //             &:not(:last-child) {
-    //                 margin-right: 60px;
-    //             }
-
-    //             &:hover,
-    //             &:active,
-    //             &.active {
-    //                 opacity: 1;
-    //             }
-    //         }
-    //     }
-
-
     .navbar {
         padding: 0;
 
@@ -192,18 +161,6 @@ header {
     }
 }
 
-@include media-breakpoint-only(lg) {
-    header {
-        // .navbar-nav {
-        //     .nav-link {
-        //         &:not(:last-child) {
-        //             margin-right: 30px;
-        //         }
-        //     }
-        // }
-    }
-}
-
 @include media-breakpoint-down(lg) {
     header {
         padding: 30px 0;
@@ -216,38 +173,17 @@ header {
                 display: none;
             }
         }
-
-        // .navbar-nav {
-        //     .nav-link {
-        //         margin: 15px 20px;
-
-        //         &:not(:last-child) {
-        //             margin-right: 0;
-        //         }
-        //     }
-        // }
-
-        // .navbar-collapse {
-        //     background-color: rgba(26, 28, 41, 0.67);
-        //     margin-top: 10px;
-        // }
-
         .call-back-modal-btn {
             top: 19px;
         }
+    }
+}
 
-        // .navbar-dark {
-        //     .navbar-toggler {
-        //         border-radius: 50%;
-        //         width: 40px;
-        //         height: 40px;
-        //         padding: 0;
-        //         border-color: $white;
 
-        //         .navbar-toggler-icon {
-        //             width: 20px;
-        //         }
-        //     }
-        // }
+@include media-breakpoint-down(lg) {
+    header { 
+        .call-back-modal-btn {
+            right: 20px;
+        }
     }
 }
