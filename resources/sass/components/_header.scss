@@ -5,12 +5,6 @@ header {
     z-index: 997;
     transition: all 0.5s;
 
-    &.header-scrolled {
-        padding: 12px 0;
-        background-color: $body-color;
-        box-shadow: 0px 2px 15px rgba($black, 0.1);
-    }
-
     .navbar {
         padding: 0;
 
@@ -27,6 +21,7 @@ header {
                 line-height: 17px;
                 color: $white !important;
                 opacity: 0.6;
+                transition: opacity .3s;
 
                 &:not(:last-child) {
                     margin-right: 60px;
@@ -39,44 +34,6 @@ header {
                 }
             }
         }
-
-        // ul {
-        //     display: flex;
-        //     align-items: center;
-        //     margin: 0;
-        //     padding: 0;
-        //     list-style: none;
-
-        //     li {
-        //         position: relative;
-        //         padding: 10px 0 10px 40px;
-
-        //         a {
-        //             padding: 0;
-        //             font-size: 21px;
-        //             color: $white;
-        //             opacity: 0.78;
-        //             white-space: nowrap;
-        //             transition: 0.3s;
-
-        //             &:hover,
-        //             &:focus,
-        //             &.active,
-        //             &.active:focus {
-        //                 color: $white;
-        //                 opacity: 1;
-        //                 text-shadow: 0.1px 0.1px 0.1px $white;
-        //             }
-        //         }
-
-        //         &:hover {
-        //             > a {
-        //                 color: $white;
-        //                 opacity: 1;
-        //             }
-        //         }
-        //     }
-        // }
 
         // .mobile-nav-toggle {
         //     cursor: pointer;
@@ -159,6 +116,7 @@ header {
         //     }
         // }
     }
+
     .call-back-modal-btn {
         position: absolute;
         right: 30px;
@@ -177,6 +135,24 @@ header {
             &:hover {
                 background: #9b8070;
             }
+        }
+    }
+
+    &.sticky {
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: -97px;
+        width: 100%;
+        padding: 30px 0;
+        background-color: rgba(27, 31, 46, 0.9);
+        transform: translateY(96px);
+        transition: transform 1s, -webkit-transform 1s;
+        box-shadow: 0 0 10px rgba($black, 0.1);
+
+        .call-back-modal-btn {
+            top: 17px;
         }
     }
 }

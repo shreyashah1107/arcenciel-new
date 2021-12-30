@@ -1,0 +1,47 @@
+.expand-img-modal {
+	.modal {
+		&-content {
+			background: transparent;
+			border: 0;
+		}
+
+		&-header {
+			padding: 0 1rem 2rem;			
+			border: 0;
+
+			.btn-close {
+				opacity: 1;
+				background-color: rgba($white, 0.6);
+				border-radius: 50%;
+
+				&:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+
+			// > 768px
+			@include media-breakpoint-up(md) {
+				padding: 1rem 0;
+
+				.btn-close {
+					margin-right: -50px;
+				}
+			}
+		}
+		
+		&-body {
+			padding: 0;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.modal-backdrop {
+	&.show {
+		opacity: 0.8;
+	}
+}

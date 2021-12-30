@@ -1,183 +1,247 @@
 .card-location {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	height: 100%;
-	text-align: center;
-	border: 1px solid $primary;
-	padding: 55px 30px;
+	background-color: #282B31;
+	border-radius: 12px;
+	padding: 40px 30px;
+	transition: background .2s ease;
+
+	&--icon {
+		width: 80px;
+		height: 80px;
+		margin-bottom: 60px;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+			object-position: left;
+		}
+	}
+
+	&--body {
+		.title,
+		.distance {
+			font-size: 20px;
+			font-weight: 500;
+		}
+		.title {			
+			line-height: 24px;
+			margin-bottom: 20px;
+		}
+		.distance {
+			line-height: 29px;
+			opacity: 0.6;
+		}
+	}
+
+	&:hover {
+		background-color: #1e2026;
+	}
+}
+
+.card-amenities {
+	position: relative;
+
+	&:before {
+		content: "";
+	    position: absolute;
+	    bottom: 0;
+	    width: 100%;
+	    height: 100%;	    
+	    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0.74) 100%);
+	    border-radius: 8px;
+	}
 
 	&--img {
-		height: 110px;
+		height: 330px;
+		border-radius: 8px;
+		background: linear-gradient(0deg, #C7A28B, #C7A28B), linear-gradient(180deg, rgba(21, 24, 31, 0.3) 0%, #111010 100%);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
+
+	&--caption {
+		position: absolute;
+		left: 30px;
+		right: 30px;
+		bottom: 30px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 36px;
+		letter-spacing: 0.05em;
+	}
+}
+
+.card-configuration {
+	position: relative;
+	padding: 30px;
+	margin-bottom: 30px;
+	background-color: #282B31;
+	border-radius: 20px;
+	z-index: 1;
+
+	&--img {
+		position: relative;
+		height: 385px;
 
 		img {
 			height: 100%;
 			width: 100%;
 			object-fit: contain;
 		}
+
+		.expand-house-img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 55px;
+			height: 55px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $primary;
+			border-radius: 50%;
+
+			img {
+				width: 27px;
+				height: auto;
+			}
+
+			&:hover {
+                background: darken($primary, 15%);
+            }
+		}
 	}
 
-	&--title {
-		font-family: $font-family-gotham-bold;
-		font-size: 26px;
-		line-height: 32px;
+	&--header {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
 		margin: 30px 0;
 	}
 
 	&--body {
-		font-family: $font-family-gotham-medium;
-		font-size: 28px;
-		line-height: 34px;
-		color: #9f9e9e;
-	}
-}
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
 
-.configuration-card {
-	text-align: center;
-	padding: 50px;
-	background-color: $white;
-	box-shadow: 1px 1px 8px 1px rgba($black, 0.1);
-
-	&--content {
-		h3 {
-			color: $black;
-			font-size: 70px;
-			margin: 0;
-		}
-		h4 {
-			color: #848586;
-			font-size: 40px;
-			margin: 0;
-		}
 		p {
-			color: $primary;
-			font-size: 26px;
-			font-family: $font-family-gotham-medium;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			opacity: 0.5;
+			margin: 8px 0px;
 		}
-	}
 
-	&--slider {
-		.configuration-card--swiper-thumbnails {
-			width: 80%;
-    		margin: 0 auto;
-    		
-			.swiper-slide {
-				> div {
-					font-size: 24px;
-					padding: 5px;
-					border-radius: 10px;
-					background-color: $black;
-					color: $white;
-					cursor: pointer;
-				}
-				&.swiper-slide-thumb-active {
-					> div {
-						color: $black;
-						background-color: #ebebeb;
-						cursor: default;
-					}
-				}
+		h6 {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 22px;
+		}
+
+		> div {
+			+ div {
+				margin-left: 10px;
 			}
 		}
 	}
 
-	&--swiper {
-		padding: 30px 0 50px 0;
-    	margin-bottom: 40px;
-
-		.swiper-slide {
-			height: 300px;
-
-			img {
-				height: 100%;
-				object-fit: contain;
-			}
-		}
-	}
-
-	.swiper-pagination {
-		.swiper-pagination-bullet-active {
-			background-color: $primary;
+	&--footer {
+		.btn {
+			font-size: 14px;
 		}
 	}
 }
 
-@include media-breakpoint-down(xl) {
-	.configuration-card {
-		padding: 30px;
-
-		&--content {
-			h3 {
-				font-size: 36px;
-			}
-			h4 {
-				font-size: 28px;
-			}
-			p {
-				font-size: 18px;
-			}
-		}
-
-		&--slider {
-			.configuration-card--swiper-thumbnails {
-				.swiper-slide {
-					> div {
-						font-size: 16px;
-					}
-				}
-			}
-		}
-
-		&--swiper {
-	    	margin-bottom: 30px;
-
-			.swiper-slide {
-				height: 200px;
-			}
-		}
-	}
-}
-
+// < 992px
 @include media-breakpoint-down(lg) {
-	.card-location {
-		padding: 30px;
+	.card-configuration {
+		padding: 20px;
 
 		&--img {
-			height: 80px;
+			height: 230px;
+
+			.expand-house-img {
+				width: 40px;
+				height: 40px;
+
+				img {
+					width: 20px;
+				}
+			}
 		}
 
-		&--title {
+		&--header {
 			font-size: 20px;
-			line-height: 26px;
-			margin: 20px 0;
+			line-height: 24px;
+			margin: 25px 0;
 		}
 
 		&--body {
-			font-size: 22px;
-			line-height: 28px;
+			p {
+				font-size: 14px;
+				line-height: 17px;
+			}
+
+			h6 {
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+// < 768px
+@include media-breakpoint-down(md) {
+	.card-location {
+		padding: 15px;
+
+		&--icon {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 30px;
+		}
+
+		&--body {
+			.title {			
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			.distance {
+				font-size: 14px;
+			}
 		}
 	}
 
-	.configuration-card {
-		padding: 20px 10px;
-
-		&--content {
-			h3 {
-				font-size: 24px;
-			}
-			h4 {
-				font-size: 20px;
-			}
-			p {
-				font-size: 16px;
-			}
+	.card-amenities {
+		&--img {
+			height: 230px;
 		}
+		&--caption {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+}
 
-		&--swiper {
-	    	margin-bottom: 0;
+// < 576px
+@include media-breakpoint-down(sm) {
+	.card-location {
+		&.flex-row {
+			align-items: center;
 
-			.swiper-slide {
-				height: 150px;
+			.card-location--icon {
+				margin-bottom: 0;
+				margin-right: 10px;
 			}
 		}
 	}

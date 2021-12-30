@@ -1,7 +1,6 @@
 body {
 	position: relative;
 	word-break: break-word;
-	
 }
 
 a {
@@ -12,18 +11,6 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
-}
-
-.section-padding {
-	padding: 150px 0;
-}
-
-.section-top-padding {
-	padding-top: 100px;
-}
-
-.section-bottom-padding {
-	padding-bottom: 100px;
 }
 
 .section-title {
@@ -38,7 +25,7 @@ a {
 		content: '';
 		position: absolute;
 		top: 50%;
-		transform: translateY(-75%);
+		transform: translateY(-83%);
 	    left: -15px;
 	    right: 0;
 		font-family: $font-family-secondary;
@@ -46,6 +33,7 @@ a {
 		line-height: 232px;
 		mix-blend-mode: overlay;
 		opacity: 0.5;
+		white-space: nowrap;
 
 		&.is-small {
 			left: 0;
@@ -54,28 +42,56 @@ a {
 			transform: translateY(-65%);
 		}
 	}
-}
 
-.section-content {
-	font-size: 27px;
-	line-height: 35px;
+	.section-text {
+		font-family: $font-family-base;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+		margin-top: 10px;
+		opacity: 0.6;
+	}
 }
 
 @include media-breakpoint-down(lg) {
 	.section-title {
-		font-size: 36px;
+		font-size: 24px;
+		line-height: 32px;
+
+		&--before-content {
+			font-size: 130px;
+			line-height: 150px;
+			transform: translateY(-91%);
+		}
+
+		.section-text {
+			font-size: 14px;
+			line-height: 17px;
+
+			br {
+				display: none;
+			}
+		}
 	}
-	.section-content {
-		font-size: 18px;
-		line-height: 26px;
+	.house-tour,
+	.location-benefit,
+	.amenities,
+	.configuration {
+		overflow: hidden;
 	}
-	.section-padding {
-		padding: 60px 0;
+}
+
+@include media-breakpoint-down(md) {
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+
+		> * {
+			padding: 0 10px;
+		}
 	}
-	.section-top-padding {
-		padding-top: 60px;
-	}
-	.section-bottom-padding {
-		padding-bottom: 60px;
+	.container-fluid {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }

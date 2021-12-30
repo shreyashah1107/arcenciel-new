@@ -1,5 +1,4 @@
 $primary: #C7A28B;
-$light-primary: #efebdb;
 $body-color: #ffffff;
 $body-bg: #15181F;
 
@@ -9,3 +8,15 @@ $font-family-base: 'Montserrat', sans-serif;
 $font-family-secondary: 'Waterfall', cursive;
 
 $container-padding-x: 30px;
+$grid-gutter-width: 1.875rem;
+
+$input-bg: $body-bg;
+$form-select-bg: $body-bg;
+$input-group-addon-bg: $body-bg;
+$input-border-radius: 8px;
+$input-padding-y: 15px;
+$input-padding-x: 15px;
+$input-border-color: rgba(255, 255, 255, 0.4);
+$input-focus-border-color: rgba(255, 255, 255, 0.4);
+$input-color: rgba(255, 255, 255, 0.4);
+$input-group-addon-color: rgba(255, 255, 255, 0.4);

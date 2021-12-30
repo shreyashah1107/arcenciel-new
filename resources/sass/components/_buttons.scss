@@ -1,53 +1,43 @@
 .btn {
-    
-    line-height: 1.1;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 15px;
     transition: all 0.3s ease-in;
 
     &.btn-primary {
-        font-size: 28px;
         color: $white;
-        padding: 20px 15px;
-        border-radius: 0;
-        font-family: $font-family-base;
+        border-color: $primary;
 
         &:hover {
-            background-color: $body-color;
-            border-color: $body-color;
-        }
-
-        &.is-rounded {
-            font-size: 20px;
-            
-            padding: 20px 40px;
-            border-radius: 18px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
+            background-color: transparent;
+            border-color: $primary;
+            color: $primary;
         }
     }
-    
-    &.btn-body {
-        color: $white;
-        background-color: $body-color;
-        border-color: $body-color;
-        border-radius: 0;
-        font-size: 23px;
-        padding: 10px 20px;
+
+    &.btn-outline-primary {
+        background-color: transparent;
+        border-color: $primary;
+        color: $primary;
 
         &:hover {
             background-color: $primary;
-            border-color: $primary;
+            color: $white;
+
+            svg {
+                path {
+                    stroke: $white;
+                }
+            }
         }
     }
 
-    @include media-breakpoint-down(lg) {
-        &.btn-primary,
-        &.btn-primary.is-rounded,
-        &.btn-body {        
-            font-size: 18px;
-        }
+    &.btn-block {
+        width: 100%;
+    }
 
-        &.btn-primary.is-rounded {
-            padding: 20px 25px;
-        }
+    svg {
+        transition: all 0.3s ease-in;
+        margin-right: 10px;
     }
 }

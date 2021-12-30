@@ -1,12 +1,24 @@
 .house-tour {
+	padding-top: 100px;
+    padding-bottom: 50px;
+
 	.tour-img {
 		position: relative;
 		height: 450px;
+		margin-bottom: 30px;
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		&.is-small {
+			height: 320px;
+		}
+
+		&.is-large {
+			height: 680px;
 		}
 
 		.expand-house-img {
@@ -31,18 +43,152 @@
             }
 		}
 	}
+
+	.view-all-btn {
+		margin-top: 100px;
+	}
 }
 
-.expand-img-modal {
-	.modal-body {
-		padding: 0;
+.location-benefit {
+	position: relative;
+	padding: 300px 0 100px;
+
+	.location-banner {
+		position: absolute;
+		right: 0;
+		top: 0;
 
 		img {
-			max-width: 100%;
+			width: 600px;
 		}
 	}
 }
 
-.modal-backdrop.show {
-    opacity: 0.8;
+.amenities {
+	position: relative;
+	padding: 350px 0 200px;
+
+	.amenities-banner {
+		position: absolute;
+		right: 0;
+		top: -100px;
+
+		img {
+			width: 900px;
+		}
+	}
+}
+
+.configuration {
+	padding-top: 170px;
+
+	.configuration-card-wrapper {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -180px;
+			bottom: 150px;
+			width: 300px;
+			height: 300px;
+			background: url('../img/icons/configuration.svg') no-repeat;
+			background-size: 300px;
+		}
+	}
+}
+
+// < 1199px
+@include media-breakpoint-down(xl) {
+	.house-tour {
+		.tour-img {
+			height: 400px;
+
+			&.is-small {
+    			height: 200px;
+			}
+
+			&.is-large {
+			    height: 500px;
+			}
+
+			.expand-house-img {
+				height: 50px;
+				width: 50px;
+				right: 10px;
+    			bottom: 10px;
+
+				img {
+					width: 20px;
+				}
+			}
+		}
+	}
+	.configuration-card-wrapper {
+		&:before {
+			left: auto;
+			right: -30px;
+    		top: -110px;
+			bottom: auto;
+			width: 80px;
+			height: 80px;
+			background-size: 80px;
+		}
+	}
+}
+
+// < 992px
+@include media-breakpoint-down(lg) {
+	.location-benefit {
+		.location-banner {
+			right: -115px;
+
+			img {
+		    	width: 400px;
+		    }
+		}
+	}
+
+	.amenities {
+		padding: 270px 0 120px;
+
+		.amenities-banner {
+			right: -130px;
+			top: 0;
+
+			img {
+				width: 400px;
+			}
+		}
+	}
+
+	.configuration {
+		padding: 70px 0;
+	}
+}
+
+// < 768px
+@include media-breakpoint-down(md) {
+	.house-tour {
+		.tour-img {
+			height: 240px;
+
+			&.is-small {
+    			height: 150px;
+			}
+
+			&.is-large {
+			    height: 360px;
+			}
+
+			.expand-house-img {
+				height: 40px;
+				width: 40px;
+			}
+		}
+
+		.view-all-btn {
+			margin-top: 0;
+		}
+	}
 }

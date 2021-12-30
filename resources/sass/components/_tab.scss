@@ -1,0 +1,72 @@
+.nav-tabs {
+	position: relative;
+	border-bottom: 0;
+	z-index: 1;
+
+	.nav-link {
+		display: inline;
+		margin: 0 15px;
+		padding: 15px 60px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+		letter-spacing: 0.05em;
+		opacity: 0.5;
+		color: $white;
+		border: 0;
+		border-bottom: 2px solid rgba($white, 0.5);
+
+		&.active {
+			color: $primary;
+			opacity: 1;
+			border-bottom-color: $primary;
+			background-color: transparent;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.tab-content {
+	position: relative;
+	z-index: 1;
+	margin-top: 20px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -110px;
+    	right: -20px;
+		width: 245px;
+		height: 245px;
+		background: url('../img/icons/ellipse.svg') no-repeat;
+		background-size: 245px;
+	}
+}
+
+// < 768px
+@include media-breakpoint-down(md) {
+	.nav-tabs {
+		.nav-link {
+			font-size: 14px;
+			line-height: 17px;
+		    margin: 0 5px;
+		    padding: 10px 1px;
+		}
+	}
+
+	.tab-content {
+		&:after {
+			bottom: -50px;
+			width: 150px;
+			height: 150px;
+			background-size: 150px;
+		}
+	}
+}
