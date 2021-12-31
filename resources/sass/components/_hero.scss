@@ -2,6 +2,7 @@
 	position: relative;
 	background: linear-gradient(180deg, #1D2133 0%, #15181F 100%), linear-gradient(180deg, #1D2133 0%, #15181F 100%);
 	padding-top: 140px;
+	padding-bottom: 100px;
 
 	&:before {
 		content: '';
@@ -17,11 +18,12 @@
 
 	&--img {
 		position: relative;
+		height: calc(100vh - 165px);
 
 		img {
-			width: auto;
-			height: 600px;
-			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;	
 		}
 
 		&:before {
@@ -99,16 +101,44 @@
 // < 768px
 @include media-breakpoint-down(md) {
 	.hero {
-		padding-top: 70px;
+		padding-top: 100px;
+		padding-bottom: 0;
 
 		&--img {
-			img {
-				height: auto;
-    			max-height: 500px;
-    		}
-    	}
+			height: calc(100vh - 150px);
+		}
     }
 }
+
+@media screen and (max-height: 470px)
+       		  and (orientation: landscape) {
+	.hero {
+		&--img {
+			&:before {
+				font-size: 100px;
+				line-height: 130px;
+			}
+		}
+		.logo-text {
+			h1 {
+				font-size: 30px;
+				line-height: 40px;
+			}
+		}
+		&--content {
+			bottom: -20px;
+
+			.map-marker {
+				margin-bottom: 10px;
+			}
+
+			.location {
+				margin-bottom: 5px;
+			}
+		}
+    }
+}
+
 
 // < 576px
 @include media-breakpoint-down(sm) {
