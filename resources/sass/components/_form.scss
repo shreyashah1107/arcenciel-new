@@ -19,24 +19,31 @@
     color: rgba($white, 0.4);
 }
 
-.wpcf7-form {
+.wpcf7 {
     p {
         margin-bottom: 40px;
     }
 
     label {
+        display: block;
         font-size: 14px;
         line-height: 17px;
         color: $white;
         opacity: 0.4;
-        margin-bottom: 12px;
     }
 
     .wpcf7-form-control-wrap {
+        width: 100%;
+        display: block;
+        color: #737479;
+        margin-top: 12px;
+
         .wpcf7-form-control {
             @extend .form-control;
+            color: #cfcfcf;
             font-size: 16px;
             background-color: $body-bg;
+            border-color: 1px solid #cfcfcf;
 
             &:focus {
                 color: $white;
@@ -44,6 +51,11 @@
                 outline: none;
                 box-shadow: none;
             }
+        }
+
+        .wpcf7-not-valid-tip {
+            color: #ff6868;
+            margin-top: 10px;
         }
     }
 
@@ -64,6 +76,26 @@
             background-color: $body-bg;
             color: $input-color;
         }
+    }
+
+    form.invalid .wpcf7-response-output, 
+    form.unaccepted .wpcf7-response-output, 
+    form.payment-required .wpcf7-response-output {
+        border-color: #ff1717;
+        color: #842029;
+        background-color: #f8d7da;
+        border-color: #f5c2c7;
+        padding: 1rem;
+        margin: 40px 0;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        font-size: 14px;
+    }
+}
+
+.modal {
+    .wpcf7-form-control-wrap {
+        margin-bottom: 30px;
     }
 }
 
@@ -113,9 +145,16 @@
 }
 
 @include media-breakpoint-down(lg) {
-    .wpcf7-form {
-        p {
-            margin-bottom: 15px;
+    .wpcf7 {
+        form.invalid .wpcf7-response-output, 
+        form.unaccepted .wpcf7-response-output, 
+        form.payment-required .wpcf7-response-output {
+            margin: 30px 0;   
+        }
+        &-form {
+            p {
+                margin-bottom: 15px;
+            }
         }
     }
     .form-group {
