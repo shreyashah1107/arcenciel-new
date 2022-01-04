@@ -17,9 +17,7 @@
 		border-bottom: 2px solid rgba($white, 0.5);
 
 		&.active {
-			color: $primary;
 			opacity: 1;
-			border-bottom-color: $primary;
 			background-color: transparent;
 		}
 
@@ -29,6 +27,27 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		&.tab-for-you {
+			&.active {
+				color: #C7A28B;
+				border-bottom-color: #C7A28B;
+			}
+		}
+
+		&.tab-kids {
+			&.active {
+				color: #8869DD;
+				border-bottom-color: #8869DD;
+			}
+		}
+
+		&.tab-parents {
+			&.active {
+				color: #3FB0B0;
+				border-bottom-color: #3FB0B0;
+			}
 		}
 	}
 }

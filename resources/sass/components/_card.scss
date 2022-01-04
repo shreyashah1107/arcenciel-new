@@ -45,6 +45,10 @@
 
 @-webkit-keyframes rotate {
   	0% {
+    	-webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+  	}
+  	100% {
     	-webkit-transform: rotateZ(-12deg);
         transform: rotateZ(-12deg);
   	}
@@ -56,6 +60,10 @@
 
 @keyframes rotate {
   	0% {
+    	-webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+  	}
+  	50% {
     	-webkit-transform: rotateZ(-12deg);
         transform: rotateZ(-12deg);
   	}
@@ -65,13 +73,13 @@
   	}
 }
 
-
 .rotating-img { 
-	animation: rotate 1s infinite linear;
+	animation: rotate .5s infinite linear;
 }
 
 .card-amenities {
 	position: relative;
+	border-radius: 8px;
 
 	&:before {
 		content: "";
@@ -79,14 +87,14 @@
 	    bottom: 0;
 	    width: 100%;
 	    height: 100%;	    
-	    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0.74) 100%);
+	    // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0.74) 100%);
 	    border-radius: 8px;
 	}
 
 	&--img {
 		height: 330px;
 		border-radius: 8px;
-		background: linear-gradient(0deg, #C7A28B, #C7A28B), linear-gradient(180deg, rgba(21, 24, 31, 0.3) 0%, #111010 100%);
+		// background: linear-gradient(0deg, #C7A28B, #C7A28B), linear-gradient(180deg, rgba(21, 24, 31, 0.3) 0%, #111010 100%);
 
 		img {
 			width: 100%;
@@ -105,6 +113,18 @@
 		font-weight: 600;
 		line-height: 36px;
 		letter-spacing: 0.05em;
+	}
+
+	&.tab-content--for-you {
+		background-color: #C7A28B;
+	}
+
+	&.tab-content--kids {
+		background-color: #8869DD;
+	}
+
+	&.tab-content--parents {
+		background-color: #3FB0B0;
 	}
 }
 
